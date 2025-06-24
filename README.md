@@ -1,27 +1,27 @@
-🎓 LinguaLearn – Nền tảng học tiếng Anh & tiếng Đức hiện đại
-Created by StephenSouth13 – Long Quách
+🎓 LinguaLearn – Nền tảng học tiếng Anh & tiếng Đức
 Website chính thức: vsm.org.vn
+Tác giả: StephenSouth13 (Long Quách)
 
-✨ Tính năng nổi bật
-🌐 Trang chủ hiện đại, thiết kế chuẩn responsive
+✨ Tính năng chính
+🌐 Giao diện hiện đại, responsive
 
 🔐 Đăng ký/Đăng nhập bằng Firebase Auth
 
 📊 Dashboard theo dõi tiến độ học
 
-📝 Tô đậm văn bản để dịch và phát âm
+📝 Dịch & phát âm từ được tô đậm
 
-📘 Sổ từ vựng cá nhân, đồng bộ lưu trữ
+📘 Sổ từ vựng cá nhân (đồng bộ)
 
-🎴 Luyện tập Flashcard kèm ảnh minh họa
+🎴 Luyện tập Flashcard có ảnh minh họa
 
-🔐 Định tuyến an toàn cho người dùng đăng nhập
+🎧 Nhúng nhạc học ngôn ngữ (Spotify/Upload)
 
-🎧 Nhúng nhạc học ngôn ngữ (Spotify hoặc tải lên)
+⏱ Ghi nhận thời gian học → đổi thưởng
 
-⏱ Ghi nhận thời gian học → quy đổi token thưởng
+🧾 Giao diện CRM thân thiện
 
-🧾 Giao diện theo kiểu CRM chuyên nghiệp
+🔐 Định tuyến bảo mật cho người dùng
 
 🧰 Công nghệ sử dụng
 Next.js 14 (App Router)
@@ -30,30 +30,30 @@ Tailwind CSS
 
 Firebase Authentication
 
-Google Translate API & Web Speech API
+Google Translate API, Web Speech API
 
-LocalStorage / Firestore
+Firestore & LocalStorage
 
 Spotify Embed / Audio Upload
 
-Chart.js (biểu đồ học tập)
+Chart.js
 
-🚀 Bắt đầu sử dụng
+🚀 Hướng dẫn cài đặt
 1. Yêu cầu hệ thống
-Node.js v18.17 hoặc mới hơn
+Node.js v18.17+
 
 npm hoặc yarn
 
 Tài khoản Firebase
 
-2. Cài đặt dự án
+2. Cài đặt
 bash
 Copy
 Edit
 git clone https://github.com/StephenSouth13/lingua-learn.git
 cd lingua-learn
 npm install
-3. Thiết lập biến môi trường .env.local
+3. Tạo file .env.local
 env
 Copy
 Edit
@@ -63,36 +63,34 @@ NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
 NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-storage-bucket
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
 NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
-4. Chạy server local
+4. Chạy local
 bash
 Copy
 Edit
 npm run dev
-Truy cập tại: http://localhost:3000
+Mở trình duyệt: http://localhost:3000
 
-☁️ Triển khai lên Vercel
-Tự động bằng GitHub
+☁️ Triển khai với Vercel
+Cách 1: Triển khai tự động
 Push code lên GitHub
 
-Vào vercel.com, đăng nhập
-
-Chọn New Project → Import repo GitHub
+Đăng nhập vercel.com → New Project → Import repo
 
 Thiết lập:
 
 Preset: Next.js
 
-Root dir: ./
+Root Dir: ./
 
-Build: next build
+Build Command: next build
 
 Output: .next
 
-Environment Variables: copy từ .env.local
+Env Variables: copy từ .env.local
 
-Nhấn Deploy
+Bấm Deploy
 
-Thủ công bằng Vercel CLI
+Cách 2: Dùng Vercel CLI
 bash
 Copy
 Edit
@@ -104,40 +102,25 @@ csharp
 Copy
 Edit
 lingua-learn/
-├── app/
-│   ├── dashboard/           # Trang chính cá nhân
-│   ├── login/               # Đăng nhập
-│   ├── register/            # Đăng ký
-│   ├── translate/           # Tính năng dịch
-│   ├── practice/            # Flashcard và luyện tập
-│   ├── reward/              # Đổi token lấy thưởng
-│   └── layout.tsx           # Giao diện layout chính
-├── components/
-│   ├── auth/                # Giao diện đăng nhập
-│   ├── ui/                  # Nút, modal, loader
-│   └── vocabulary/          # Thành phần từ vựng
-├── lib/
-│   ├── firebase/            # Kết nối Firebase
-│   └── vocabulary.ts        # Quản lý từ
-├── public/                  # Hình ảnh và media
-└── README.md                # Tài liệu hướng dẫn
-🔮 Mở rộng trong tương lai
+├── app/               # Các route chính (dashboard, login, translate,...)
+├── components/        # Giao diện con (auth, vocabulary, ui)
+├── lib/               # Hàm xử lý Firebase và logic từ vựng
+├── public/            # Hình ảnh và media
+└── README.md
+🔮 Kế hoạch mở rộng
 Tích hợp AI luyện nói (ChatGPT)
 
-Store VSM: đổi token lấy voucher mua hàng
+VSM Store: đổi token lấy voucher
 
-Khung avatar, chủ đề học tập, nhạc nâng cao
+Chủ đề học nâng cao, avatar tùy chỉnh
 
-Xếp hạng học viên và phòng học nhóm
+Xếp hạng học viên, học nhóm trực tuyến
 
-📜 License
-Dự án theo giấy phép MIT License
+📜 Giấy phép
+Dự án được phân phối theo MIT License
 
-🧑‍💼 Chủ dự án
-Tên GitHub: StephenSouth13
+🧑‍💼 Tác giả & cộng sự
+StephenSouth13 – Long Quách (chủ dự án)
 
-Tên thật: Long Quách
-Cộng sự: longnguyen0611 - Nguyên Thành Long - https://github.com/longnguyen0611
-Website: vsm.org.vn
-
-Logo: Để trống bên trái header để bạn thêm vào
+longnguyen0611 – Nguyên Thành Long
+GitHub: longnguyen0611
